@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0a0a0b">
+    <meta name="description" content="TOKI: hebras, botánicos e infusiones sin estimulantes. Un ritual de calma para cualquier momento del día.">
+    <title>TOKI — Té puro, natural y sin estimulantes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="announcement"><span>UN MOMENTO PARA VOS</span><span>Envíos a todo el país · Consultanos por WhatsApp</span></div>
+
+    <header class="site-header">
+        <a class="wordmark" href="#inicio" aria-label="TOKI, inicio">
+            <span class="wordmark-seal" aria-hidden="true">時</span>
+            <span class="wordmark-type"><strong>TOKI</strong><small>Té en Hebra Premium</small></span>
+        </a>
+        <button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+            <a href="#coleccion">La colección</a>
+            <a href="#ritual">El ritual</a>
+            <a href="#filosofia">Filosofía</a>
+        </nav>
+    </header>
+ 
+    <main>
+        <section class="hero" id="inicio">
+            <div class="hero-image" role="img" aria-label="Cuenco de té servido en un espacio de calma"></div>
+            <div class="hero-shade"></div>
+            <div class="hero-content">
+                <span class="eyebrow"><i></i> EL PRESENTE EN CADA TAZA <i></i></span>
+                <div class="hero-seal" aria-label="TOKI, tiempo y momento"><span>時</span></div>
+                <p class="hero-kicker">INFUSIONES BOTÁNICAS · HEBRAS NOBLES · LIBRE DE TEÍNA</p>
+                <h1><span class="hero-title-line">El arte de detener el tiempo</span><br><em>en cada infusión.</em></h1>
+                <p class="hero-copy">Hebras selectas y botánicos nobles para volver al presente, taza a taza. Sin cafeína. Sin apuro. Con toda el alma de la hoja.</p>
+                <a class="button button-gold" href="#coleccion">Descubrir la colección <span aria-hidden="true">↗</span></a>
+                <div class="hero-notes" aria-label="Características de nuestros blends">
+                    <div><strong>0%</strong><span>TEÍNA</span></div>
+                    <div><strong>100%</strong><span>HEBRA ENTERA · CULTIVO VOLCÁNICO</span></div>
+                    <div><strong>∞</strong><span>TU PROPIO TIEMPO</span></div>
+                </div>
+            </div>
+            <span class="hero-index">TOKI · BUENOS AIRES  </span>
+        </section>
+
+        <section class="intro-strip" aria-label="Presentación">
+            <span class="eyebrow">EL ARTE DE HACER UNA PAUSA</span>
+            <p>Creemos que el bienestar no necesita prisa.<br><em>Solo agua, hojas nobles y un instante para vos.</em></p>
+        </section>
+
+        <section class="collection section-wrap" id="coleccion">
+            <div class="section-heading">
+                <div><span class="eyebrow">HEBRAS SELECTAS · N° 01—06</span><h2>Encontrá tu <em>momento.</em></h2></div>
+                <p>Una colección botánica para acompañar cada hora. Todas nuestras mezclas son naturalmente libres de cafeína.</p>
+            </div>
+
+            <div class="product-grid">
+                <article class="product-card" data-product="houjicha">
+                    <div class="product-photo photo-houjicha"><span class="product-number">01 / TOKI</span></div>
+                    <div class="product-info"><div class="product-overline">HERBAL · FRESCO · SERENO</div><h3>RITUAL CALMA</h3><p>Notas frescas de cedrón y menta con un fondo suave de tilo y melisa. El instante perfecto para desacelerar.</p><div class="product-purchase"><label class="sr-only" for="format-houjicha">Formato de Toki Houjicha Imperial</label></div>
+                </article>
+                <article class="product-card" data-product="genmaicha">
+                    <div class="product-photo photo-genmaicha"><span class="product-number">02 / TOKI</span></div>
+                    <div class="product-info"><div class="product-overline">FLORAL · FRUTAL · EQUILIBRADO</div><h3>JARDIN BOTÁNICO</h3><p>Bouquet de rosas, jazmines y lavanda con toques cítricos de naranja y manzana. La frescura ideal para pausar la tarde.</p><div class="product-purchase"><label class="sr-only" for="format-genmaicha">Formato de Genmaicha Descafeinado</label></div>
+                </article>
+                <article class="product-card" data-product="sobacha">
+                    <div class="product-photo photo-sobacha"><span class="product-number">03 / TOKI</span></div>
+                    <div class="product-info"><div class="product-overline">FRUTAL · RUBÍ · SILVESTRE</div><h3>ROUGE BERRY</h3><p>Infusión vibrante de hibiscus, rosa mosqueta y frutos rojos. Perfecta caliente o en iced tea para pausar la tarde.</p><div class="product-purchase"><label class="sr-only" for="format-sobacha">Formato de Soba Cha Dorado</label></div>
+                </article>
+                <article class="product-card" data-product="sakura">
+                    <div class="product-photo photo-sakura"><span class="product-number">04 / TOKI</span><span class="photo-stamp">桜</span></div>
+                    <div class="product-info"><div class="product-overline">FLORAL · DELICADO · LUMINOSO</div><h3>Sakura Moon White</h3><p>Flores sutiles y un perfil delicado que invita a bajar el ritmo.</p><div class="product-purchase"><label class="sr-only" for="format-sakura">Formato de Sakura Moon White</label></div>
+                </article>
+                <article class="product-card" data-product="kyobancha">
+                    <div class="product-photo photo-kyobancha"><span class="product-number">05 / TOKI</span><span class="photo-stamp">京番茶</span></div>
+                    <div class="product-info"><div class="product-overline">AHUMADO · PROFUNDO · TERROSO</div><h3>Kyobancha Ahumado</h3><p>Hojas tostadas de carácter profundo y aroma de hogar.</p><div class="product-purchase"><label class="sr-only" for="format-kyobancha">Formato de Kyobancha Ahumado</label></div>
+                </article>
+                <article class="product-card" data-product="atelier">
+                    <div class="product-photo photo-atelier"><span class="product-number">06 / TOKI</span><span class="photo-stamp">時</span></div>
+                    <div class="product-info"><div class="product-overline">EDICIÓN ESPECIAL · SEIS MOMENTOS</div><h3>Set Atelier Ceremonial</h3><p>Una selección curada para descubrir la colección completa.</p><div class="product-purchase"><label class="sr-only" for="format-atelier">Formato del Set Atelier Ceremonial</label></div>
+                </article>
+            </div>
+            <p class="collection-note">Precios en pesos argentinos. El costo final del envío se confirma al coordinar tu pedido.</p>
+        </section>
+
+        <section class="manifesto" id="filosofia">
+            <div class="manifesto-art" role="img" aria-label="Hojas de té secas seleccionadas a mano"></div>
+            <div class="manifesto-copy">
+                <span class="eyebrow">NUESTRA FILOSOFÍA</span>
+                <span class="manifesto-kanji" aria-hidden="true">時</span>
+                <h2>Despojamos la cafeína.<br><em>Jamás el alma de la hoja.</em></h2>
+                <p>Despojamos la cafeína, jamás la reverencia ni el alma de la hoja. En las hebras de té, el vapor de manantial ayuda a retirar la teína con cuidado; nuestros botánicos y granos completan la colección con perfiles naturalmente libres de estimulantes. Sin atajos, con respeto por el origen y el tiempo de cada ingrediente.</p>
+                <a class="text-link" href="#ritual">El ritual comienza aquí <span aria-hidden="true">→</span></a>
+            </div>
+        </section>
+
+        <section class="ritual section-wrap" id="ritual">
+            <div class="section-heading ritual-heading"><div><span class="eyebrow">EL MÉTODO TOKI · 03 PASOS</span><h2>El agua también <em>escucha.</em></h2></div><p>Unas pocas atenciones revelan todos los matices de cada hebra.</p></div>
+            <div class="ritual-grid">
+                <article class="ritual-step"><span class="step-number">01</span><span class="step-icon" aria-hidden="true">湯</span><h3>Agua en calma</h3><p>Calentá agua fresca entre <strong>75 °C y 88 °C</strong>, según la variedad. Sin hervor intenso.</p></article>
+                <article class="ritual-step"><span class="step-number">02</span><span class="step-icon" aria-hidden="true">器</span><h3>Porcelana tibia</h3><p>Templá tu tetera o cuenco y dejá que las hebras se abran con espacio.</p></article>
+                <article class="ritual-step"><span class="step-number">03</span><span class="step-icon" aria-hidden="true">匙</span><h3>Medida justa</h3><p>Usá una medida de <strong>Chashaku</strong> por taza y reposá de 3 a 5 minutos.</p></article>
+            </div>
+            <div class="ritual-footnote"><span>2 g</span> de hebras <i>·</i> <span>200 ml</span> de agua <i>·</i> <span>3—4 min</span> de pausa</div>
+        </section>
+
+        <section class="newsletter">
+            <span class="eyebrow">TOKI</span>
+            <h2>EL RITUAL DE HACER UNA PAUSA.</h2>
+            <p>Té de especialidad & botánica en hebras premium.</p>            
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <a class="wordmark footer-brand" href="#inicio"><span class="wordmark-seal" aria-hidden="true">時</span><span class="wordmark-type"><strong>TOKI</strong><small>Té en Hebra Premium</small></span></a>
+        <p>Un momento presente, una taza a la vez.</p>
+        <nav aria-label="Enlaces de servicio"><a href="https://wa.me/5491161992727?text=Hola%20TOKI!%20Deseo%20conocer%20m%C3%A1s%20sobre%20sus%20blends%20en%20hebras." target="_blank" rel="noopener noreferrer" aria-label="Atención personalizada por WhatsApp">Contacto</a><a href="#ritual">Preparación</a><a href="https://wa.me/5491161992727?text=Hola%20TOKI!%20Deseo%20conocer%20m%C3%A1s%20sobre%20sus%20blends%20en%20hebras." target="_blank" rel="noopener noreferrer">Envíos y pedidos</a></nav>
+        <small class="footer-legal"><span id="year"></span> TOKI® y su logo son marcas registradas · Buenos Aires, Argentina</small>
+    </footer>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <div class="sr-only" id="cartAnnouncement" aria-live="assertive"></div>
+    <a class="whatsapp-float" href="https://wa.me/5491161992727?text=Hola%20TOKI!%20Deseo%20conocer%20m%C3%A1s%20sobre%20sus%20blends%20en%20hebras." target="_blank" rel="noopener noreferrer" aria-label="Atención personalizada por WhatsApp">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+            <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67Z"/>
+        </svg>
+        <span>WhatsApp</span>
+    </a>
+</body>
+</html>
