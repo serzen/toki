@@ -28,7 +28,8 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .announcement span:first-child { color: var(--gold-light); }
 .site-header { position: sticky; z-index: 30; top: 0; min-height: 76px; padding: 11px 7%; display: flex; justify-content: space-between; align-items: center; background: rgba(10,10,11,.92); border-bottom: 1px solid rgba(212,175,55,.17); backdrop-filter: blur(16px); }
 .wordmark { display: inline-flex; align-items: center; gap: 11px; }
-.wordmark-seal { width: 42px; height: 42px; display: grid; place-items: center; border: 1px solid var(--gold); border-radius: 50%; color: var(--gold-light); font-family: var(--serif); font-size: 22px; box-shadow: inset 0 0 12px rgba(212,175,55,.09), 0 0 18px rgba(212,175,55,.08); }
+.wordmark-logo { width: 44px; height: 40px; flex: 0 0 auto; object-fit: contain; }
+.wordmark-mark { width: 52px; flex: 0 0 auto; color: var(--gold-light); font-family: var(--serif); font-size: 42px; line-height: 1; text-align: center; }
 .wordmark-type { display: grid; line-height: 1.2; }
 .wordmark-type strong { color: var(--gold-light); font-size: 16px; font-weight: 500; letter-spacing: .24em; }
 .wordmark-type small { margin-top: 4px; color: var(--gold-muted); font-size: 8px; letter-spacing: .2em; }
@@ -47,8 +48,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .eyebrow { color: var(--gold-light); font-size: 9px; letter-spacing: .24em; line-height: 1.6; }
 .hero .eyebrow { display: inline-flex; align-items: center; gap: 12px; }
 .hero .eyebrow i { width: 24px; height: 1px; display: inline-block; background: var(--gold); }
-.hero-seal { width: 86px; height: 86px; margin: 26px auto 16px; padding: 5px; display: grid; place-items: center; border: 1px solid rgba(229,195,101,.75); border-radius: 50%; box-shadow: 0 0 0 5px rgba(212,175,55,.09), inset 0 0 16px rgba(212,175,55,.14); }
-.hero-seal span { color: #efd27e; font-family: var(--serif); font-size: 40px; text-shadow: 0 1px 1px #170f00; }
+.hero-logo { width: 140px; height: 140px; margin: 26px auto 16px; display: block; object-fit: contain; }
 .hero-kicker { margin: 0 0 12px; color: #e1ca8c; font-size: 9px; letter-spacing: .22em; }
 .hero h1 { margin: 0; color: #f5f0e3; font-family: var(--serif); font-size: clamp(45px, 7vw, 76px); font-weight: 400; letter-spacing: -.035em; line-height: 1.09; }
 .hero-title-line { display: inline-block; white-space: nowrap; }
@@ -77,18 +77,19 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .product-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 34px 21px; }
 .product-card { min-width: 0; }
 .product-photo { position: relative; height: clamp(215px, 26vw, 310px); overflow: hidden; background-color: #211e17; background-size: cover; background-position: center; isolation: isolate; }
-.product-photo::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(180deg, rgba(0,0,0,.27), transparent 35%, rgba(0,0,0,.38)); transition: background .3s; }
-.product-card:hover .product-photo::after { background: linear-gradient(180deg, rgba(0,0,0,.18), transparent 44%, rgba(0,0,0,.26)); }
-.photo-houjicha { background-image: url("imagenes/01.jpeg"); }
-.photo-genmaicha { background-image: url("imagenes/02.jpeg"); }
-.photo-sobacha { background-image: url("imagenes/03.jpeg"); }
+.product-photo::after { position: absolute; z-index: -1; inset: 0; content: ""; background: linear-gradient(120deg, rgba(18,13,7,.34), rgba(18,13,7,.12) 48%, rgba(12,9,7,.3)), linear-gradient(180deg, rgba(0,0,0,.2), transparent 35%, rgba(0,0,0,.4)); transition: background .3s; }
+.product-card:hover .product-photo::after { background: linear-gradient(120deg, rgba(18,13,7,.23), rgba(18,13,7,.06) 48%, rgba(12,9,7,.2)), linear-gradient(180deg, rgba(0,0,0,.16), transparent 44%, rgba(0,0,0,.3)); }
+.photo-houjicha { background-image: url("imagenes/01-hebras-botanicas.jpg"); }
+.photo-genmaicha { background-image: url("imagenes/02-tetera-botanica.jpg"); }
+.photo-sobacha { background-image: url("imagenes/03-infusion-roja.jpg"); }
 .photo-houjicha, .photo-genmaicha, .photo-sobacha { background-position: center bottom; }
 .product-photo.photo-houjicha, .product-photo.photo-genmaicha, .product-photo.photo-sobacha { height: auto; aspect-ratio: 1; }
-.photo-sakura { background-image: url("https://images.unsplash.com/photo-1518977676601-b53f82aba655?auto=format&fit=crop&w=900&q=80"); }
-.photo-kyobancha { background-image: url("https://images.unsplash.com/photo-1563911892437-1fEDADE8d4a7?auto=format&fit=crop&w=900&q=80"); }
+.photo-sakura { background-image: url("imagenes/04-mezcla-de-hebras.jpg"); background-position: center bottom; }
+.photo-kyobancha { background-image: url("imagenes/05-taza-y-tetera.jpg"); }
 .photo-atelier { background-image: url("https://images.unsplash.com/photo-1542728928-1413d1894ed1?auto=format&fit=crop&w=900&q=80"); }
-.product-number { position: absolute; top: 15px; left: 15px; color: #f5edda; font-size: 8px; letter-spacing: .19em; }
-.photo-stamp { position: absolute; right: 15px; bottom: 13px; color: rgba(255,243,211,.82); font-family: var(--serif); font-size: 24px; text-shadow: 0 1px 5px #17130b; }
+.product-number { position: absolute; z-index: 1; top: 15px; left: 15px; padding: 4px 7px; border: 1px solid rgba(212,175,55,.38); color: #e5c365; background: rgba(8,8,7,.58); font-size: 8px; letter-spacing: .19em; text-shadow: 0 1px 5px rgba(0,0,0,.8); }
+.product-card:nth-child(-n+5) .product-number { color: #e5c365; }
+.product-stamp { position: absolute; z-index: 1; right: 15px; bottom: 13px; width: 39px; height: 39px; padding: 3px; border: 1px solid rgba(212,175,55,.28); border-radius: 50%; object-fit: contain; opacity: .82; background: rgba(8,8,7,.48); filter: drop-shadow(0 1px 5px #17130b); }
 .product-info { padding: 17px 1px 0; }
 .product-overline { color: var(--gold-muted); font-size: 8px; letter-spacing: .17em; }
 .product-info h3 { margin: 8px 0 5px; color: #f1ebdc; font-family: var(--serif); font-size: 20px; font-weight: 400; }
@@ -128,7 +129,7 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 .button-outline { color: var(--gold-light); background: transparent; }
 .button-outline:hover { color: var(--ink); background: var(--gold-light); }
 .site-footer { min-height: 140px; padding: 28px 7%; display: grid; grid-template-columns: 1fr 1.2fr 1fr; align-items: center; gap: 18px; border-top: 1px solid rgba(212,175,55,.14); background: #080809; }
-.footer-brand .wordmark-seal { width: 36px; height: 36px; font-size: 19px; }
+.footer-brand .wordmark-mark { width: 46px; font-size: 37px; }
 .site-footer > p { color: #888579; text-align: center; font-family: var(--serif); font-size: 12px; }
 .site-footer nav { display: flex; justify-content: flex-end; gap: 19px; }
 .site-footer nav a, .footer-legal { color: #9b9586; font-size: 9px; }
@@ -139,6 +140,18 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
 
 .drawer-overlay { position: fixed; z-index: 49; inset: 0; visibility: hidden; background: rgba(0,0,0,.67); opacity: 0; transition: opacity .28s, visibility .28s; }
 .drawer-overlay.active { visibility: visible; opacity: 1; }
+.info-dialog { width: min(560px, calc(100% - 32px)); max-width: none; max-height: min(760px, calc(100% - 32px)); padding: 0; overflow: auto; border: 1px solid var(--line); border-top: 2px solid var(--gold); color: var(--text); background: #111110; box-shadow: 0 24px 80px rgba(0,0,0,.55); }
+.info-dialog::backdrop { background: rgba(0,0,0,.72); backdrop-filter: blur(4px); }
+.info-dialog-header { padding: 23px 26px 19px; display: flex; justify-content: space-between; align-items: center; gap: 20px; border-bottom: 1px solid var(--line); }
+.info-dialog-header h2 { margin: 5px 0 0; color: var(--text); font-family: var(--serif); font-size: 27px; font-weight: 400; }
+.info-dialog-content { padding: 20px 26px 27px; }
+.info-dialog-intro { margin: 0 0 20px; color: #d3cbb9; font-family: var(--serif); font-size: 16px; }
+.order-steps { margin: 0; padding: 0; list-style: none; }
+.order-steps li { padding: 16px 0; display: grid; grid-template-columns: 35px 1fr; gap: 12px; border-top: 1px solid rgba(212,175,55,.13); }
+.order-steps li > span { color: var(--gold-light); font-family: var(--serif); font-size: 18px; }
+.order-steps h3 { margin: 0 0 4px; color: var(--text); font-size: 12px; font-weight: 600; letter-spacing: .06em; }
+.order-steps p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.75; }
+.info-dialog-cta { width: 100%; margin-top: 10px; }
 .cart-drawer { position: fixed; z-index: 50; top: 0; right: 0; width: min(460px, 100%); height: 100dvh; display: flex; flex-direction: column; border-left: 1px solid var(--line); background: #111110; box-shadow: -18px 0 60px rgba(0,0,0,.35); transform: translateX(102%); transition: transform .32s cubic-bezier(.2,.7,.2,1); }
 .cart-drawer.active { transform: translateX(0); }
 .drawer-header { min-height: 97px; padding: 19px 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--line); }
@@ -221,6 +234,8 @@ button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible
     .drawer-header { padding-right: 19px; padding-left: 19px; }
     .drawer-items { padding-right: 19px; padding-left: 19px; }
     .drawer-footer { padding-right: 19px; padding-left: 19px; }
+    .info-dialog-header { padding-right: 19px; padding-left: 19px; }
+    .info-dialog-content { padding-right: 19px; padding-left: 19px; }
     .site-footer nav { gap: 13px; }
 }
 @media (prefers-reduced-motion: reduce) {

@@ -21,7 +21,26 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutForm = document.getElementById("checkoutForm");
     const menuToggle = document.getElementById("menuToggle");
     const mainNav = document.getElementById("mainNav");
+    const orderInfoLinks = [
+        document.getElementById("orderInfoLink"),
+        document.getElementById("orderInfoNavLink")
+    ];
+    const orderInfoDialog = document.getElementById("orderInfoDialog");
+    const closeOrderInfo = document.getElementById("closeOrderInfo");
     let lastFocusedElement = null;
+
+    orderInfoLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            orderInfoDialog.showModal();
+            closeOrderInfo.focus();
+        });
+    });
+
+    closeOrderInfo.addEventListener("click", () => orderInfoDialog.close());
+    orderInfoDialog.addEventListener("click", event => {
+        if (event.target === orderInfoDialog) orderInfoDialog.close();
+    });
 
     const readCart = () => {
         try {
@@ -78,9 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    openCartBtn.addEventListener("click", openDrawer);
-    closeDrawerBtn.addEventListener("click", closeDrawer);
-    drawerOverlay.addEventListener("click", closeDrawer);
+    if (openCartBtn) openCartBtn.addEventListener("click", openDrawer);
+    if (closeDrawerBtn) closeDrawerBtn.addEventListener("click", closeDrawer);
+    if (drawerOverlay) drawerOverlay.addEventListener("click", closeDrawer);
 
     document.querySelectorAll(".add-button").forEach(button => {
         button.addEventListener("click", () => {
@@ -107,7 +126,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    cartItemsContainer.addEventListener("click", event => {
+    if (cartItemsContainer) cartItemsContainer.addEventListener("click", event => {
         const button = event.target.closest("button[data-action]");
         if (!button) return;
 
@@ -128,11 +147,11 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
         document.addEventListener("keydown", event => {
-        if (event.key === "Escape" && cartDrawer.classList.contains("active")) {
+        if (event.key === "Escape" && cartDrawer && cartDrawer.classList.contains("active")) {
             closeDrawer();
         }
 
-        if (event.key === "Tab" && cartDrawer.classList.contains("active")) {
+        if (event.key === "Tab" && cartDrawer && cartDrawer.classList.contains("active")) {
             const focusable = [...cartDrawer.querySelectorAll("button:not(:disabled), input:not(:disabled), select:not(:disabled), a[href]")];
             if (focusable.length === 0) return;
             const first = focusable[0];
@@ -162,5 +181,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     document.getElementById("year").textContent = String(new Date().getFullYear());
-    renderCart();
+    if (typeof renderCart === "function") renderCart();
 });
