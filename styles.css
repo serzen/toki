@@ -231,29 +231,28 @@ a:focus-visible {
 .hero .eyebrow {
     display: inline-flex;
     align-items: center;
-    gap: 12px;
+    gap: 14px;
+    color: #f0d47a;
+    font-size: clamp(12px, 1vw, 14px);
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .65);
 }
 
 .hero .eyebrow i {
-    width: 24px;
+    width: 28px;
     height: 1px;
     display: inline-block;
     background: var(--gold);
 }
 
-.hero-logo {
-    width: 140px;
-    height: 140px;
-    margin: 26px auto 16px;
-    display: block;
-    object-fit: contain;
-}
-
 .hero-kicker {
-    margin: 0 0 12px;
-    color: #e1ca8c;
+    margin: 9px 0 22px;
+    color: #ded0a6;
     font-size: 11px;
-    letter-spacing: .16em;
+    letter-spacing: .14em;
+    line-height: 1.7;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, .7);
 }
 
 .hero h1 {
@@ -837,6 +836,10 @@ body {
 }
 
 @media (max-width: 767px) {
+    body {
+        padding-top: 70px;
+    }
+
     .announcement {
         padding: 8px 20px;
         flex-direction: column;
@@ -849,8 +852,14 @@ body {
     }
 
     .site-header {
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        left: 0;
+        width: 100%;
         min-height: 70px;
         padding: 10px 20px;
+        display: flex;
         justify-content: space-between;
         gap: 12px;
     }
@@ -902,7 +911,7 @@ body {
         flex-direction: column;
         align-items: stretch;
         gap: 0;
-        overflow: hidden;
+        overflow-y: auto;
         visibility: hidden;
         background: rgba(10, 10, 11, .98);
         opacity: 0;
@@ -910,7 +919,8 @@ body {
     }
 
     .main-nav.open {
-        max-height: 340px;
+        max-height: calc(100vh - 70px);
+        max-height: calc(100dvh - 70px);
         padding-top: 8px;
         padding-bottom: 16px;
         border-bottom: 1px solid var(--line);
@@ -929,6 +939,16 @@ body {
         min-height: max(620px, calc(100svh - 110px));
     }
 
+    .hero-image {
+        background-position: 80% center;
+    }
+
+    .hero-shade {
+        background:
+            linear-gradient(90deg, rgba(8, 8, 8, .74), rgba(8, 8, 8, .57) 52%, rgba(8, 8, 8, .38)),
+            linear-gradient(0deg, rgba(8, 8, 8, .68), transparent 40%, rgba(8, 8, 8, .2));
+    }
+
     .hero-content {
         width: min(100% - 40px, 600px);
         padding: 42px 0 32px;
@@ -944,11 +964,22 @@ body {
         line-height: 1.15;
     }
 
+    .hero .eyebrow {
+        gap: 9px;
+        font-size: 11px;
+        letter-spacing: .16em;
+    }
+
+    .hero .eyebrow i {
+        width: 18px;
+    }
+
     .hero-kicker {
         max-width: 36ch;
         margin-right: auto;
         margin-left: auto;
-        font-size: 11px;
+        font-size: 10px;
+        letter-spacing: .1em;
         line-height: 1.7;
     }
 
